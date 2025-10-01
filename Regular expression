@@ -1,0 +1,30 @@
+# Regular Expressions
+import re
+
+myfolder = r'C:\desktop\notes'
+print(myfolder)
+
+result_search = re.search('pattern', r'string to contain the pattern')
+print(result_search)
+
+result_search_2 = re.search('pattern', r"the phrase to find isn't in this string")
+print(result_search_2)
+
+string = r"sara was able to help me find the items I needed quickly"
+new_string = re.sub('sara', 'sarah', string)
+print(new_string)
+
+customer_reviews = [
+    'sam was a great help to me in the store',
+    'the cashier was very rude to me, i think her name was elenor',
+    'amazing work from sadeen!',
+    'sarah was able to help me find the items i needed quickly'
+]
+
+sarahs_review = []
+pattern_to_find = r'sarah?' #put a question mark
+for string in customer_reviews :
+  if re.search(pattern_to_find, string) :
+    sarahs_review.append(string)
+
+print(sarahs_review)
