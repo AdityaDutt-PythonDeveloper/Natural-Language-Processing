@@ -1,0 +1,12 @@
+from nltk.stem import PorterStemmer
+ps = PorterStemmer()
+connect_tokens = ['connecting', 'connected', 'connectivity', 'connect', 'connects']
+
+for t in connect_tokens :
+  print(f"{t} : {ps.stem(t)}")
+
+# Disadvantage of stemming is that sometimes it produces meaningless words
+likes_token = ['likes', 'better', 'worse']
+
+for t in likes_token :
+  print(f"{t} : {ps.stem(t)}")
