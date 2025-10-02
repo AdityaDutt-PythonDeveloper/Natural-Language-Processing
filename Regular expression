@@ -1,7 +1,7 @@
 # Regular Expressions
 import re
 
-myfolder = r'C:\desktop\notes'
+myfolder = r'C:\desktop\notes'  #incorrect path style
 print(myfolder)
 
 result_search = re.search('pattern', r'string to contain the pattern')
@@ -28,3 +28,21 @@ for string in customer_reviews :
     sarahs_review.append(string)
 
 print(sarahs_review)
+
+needwant_review = []
+pattern_to_find = r"(need|want)ed"
+
+for string in customer_reviews :
+  if re.search(pattern_to_find, string) :
+    needwant_review.append(string)
+
+print(needwant_review)
+
+no_punc_review = []
+pattern_to_find = r"[^\w\s]" #\w means words \s means spaces
+
+for string in customer_reviews :
+  no_punc_string = re.sub(pattern_to_find, "", string)
+  no_punc_review.append(no_punc_string)
+
+print(no_punc_review)
