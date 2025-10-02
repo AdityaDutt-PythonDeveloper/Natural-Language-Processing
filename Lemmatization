@@ -1,0 +1,7 @@
+nltk.download('wordnet')
+from nltk.stem import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+
+for t in connect_tokens :
+  print(f"{t} : {lemmatizer.lemmatize(t)}")
