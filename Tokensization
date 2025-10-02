@@ -1,0 +1,8 @@
+import nltk
+nltk.download('punkt_tab') #tells from where sentence starts and ends
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+sentences = "Her cat's name is Luna. her dog's name is Max"
+sent_tokenize(sentences)
+
+word_tokenize(sentences)
